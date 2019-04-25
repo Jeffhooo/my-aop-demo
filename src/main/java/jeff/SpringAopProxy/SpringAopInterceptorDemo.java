@@ -11,8 +11,9 @@ public class SpringAopInterceptorDemo {
         A a = new AImpl();
 
         // weave methods to A with proxyFactory
-        ProxyFactory proxyFactory = new ProxyFactory(new AImpl());
+        ProxyFactory proxyFactory = new ProxyFactory(a);
         proxyFactory.addAdvice(new SpringAInterceptor());
+        proxyFactory.setProxyTargetClass(false);
         A aopA = (A) proxyFactory.getProxy();
 
         // test

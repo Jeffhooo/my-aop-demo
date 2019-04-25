@@ -1,10 +1,10 @@
-package jeff.SpringAopProxy;
+package jeff.AspectJAopProxy;
 
 import jeff.A;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SpringAopAspectDemo {
+public class AspectJAopDemo {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");

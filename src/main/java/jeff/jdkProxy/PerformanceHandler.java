@@ -17,6 +17,6 @@ public class PerformanceHandler implements InvocationHandler {
         PerformanceRecorder.begin(target.getClass().getName() + "." + method.getName());
         Object object = method.invoke(target, args);
         PerformanceRecorder.end();
-        return null;
+        return object;
     }
 }

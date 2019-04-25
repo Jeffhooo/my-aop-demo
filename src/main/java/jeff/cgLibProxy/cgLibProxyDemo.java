@@ -2,6 +2,7 @@ package jeff.cgLibProxy;
 
 import jeff.A;
 import jeff.AImpl;
+import org.springframework.cglib.proxy.Enhancer;
 
 public class cgLibProxyDemo {
 
@@ -10,8 +11,11 @@ public class cgLibProxyDemo {
         A a = new AImpl();
 
         // Weave method to A with cgLib proxy
-        AProxy proxy = new AProxy();
-        A aopA = (A) proxy.getProxy(AImpl.class);
+        Enhancer enhancer = new Enhancer();
+        AInterceptor aInterceptor = new AInterceptor();
+        enhancer.setSuperclass(AImpl.class);
+        enhancer.setCallback(aInterceptor);
+        A aopA = (A) enhancer.create();
 
         // test
         a.say("I am a!");

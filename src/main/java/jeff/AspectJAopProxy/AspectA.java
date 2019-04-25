@@ -1,4 +1,4 @@
-package jeff.SpringAopProxy;
+package jeff.AspectJAopProxy;
 
 import jeff.PerformanceRecorder;
 import org.aspectj.lang.annotation.After;
@@ -6,7 +6,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 
 @Aspect
-public class SpringAspect {
+public class AspectA {
 
     @Before("execution(* say(..)) && target(jeff.AImpl)")
     public void beforeSay() {
