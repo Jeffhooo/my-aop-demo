@@ -1,5 +1,8 @@
 package jeff;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class AImpl implements A {
     public void say(String s) {
 //        PerformanceRecorder.begin("jeff.A.say");

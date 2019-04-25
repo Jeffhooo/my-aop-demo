@@ -5,7 +5,7 @@ public class PerformanceRecorder {
     private static ThreadLocal<Performance> performance = new ThreadLocal<Performance>();
 
     public static void begin(String method) {
-        System.out.println("begin record...");
+        System.out.println("Begin record...");
         Performance p = new Performance(method);
         performance.set(p);
     }
