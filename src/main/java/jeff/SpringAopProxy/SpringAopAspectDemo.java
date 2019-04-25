@@ -4,7 +4,7 @@ import jeff.A;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SpringAopProxyDemo {
+public class SpringAopAspectDemo {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
